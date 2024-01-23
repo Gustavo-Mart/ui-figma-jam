@@ -6,14 +6,9 @@ import * as Toolbar from '@radix-ui/react-toolbar'
 import 'reactflow/dist/style.css';
 import { Square } from './components/nodes/Square';
 import { useCallback } from 'react';
-import DefaultEdge from './components/edges/DefaultEdge';
 
 const NODE_TYPES = {
   square :Square
-}
-
-const EDGE_TYPES = {
-  default: DefaultEdge,
 }
 
 const INITIAL_NODES = [
@@ -64,7 +59,6 @@ function App() {
     <div className='h-screen w-screen'>
       <ReactFlow
         nodeTypes={NODE_TYPES}
-        edgeTypes={EDGE_TYPES}
         nodes={nodes}
         edges={edges}
         onEdgesChange={onEdgesChange}
